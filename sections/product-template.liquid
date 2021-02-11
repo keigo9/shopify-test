@@ -226,7 +226,7 @@
                       {{ 'products.product.sold_out' | t }}
                     {% else %}
                       {{ 'products.product.add_to_cart' | t }}
-                    {% endunless %}
+                    {% endunless %} 
                   </span>
                   <span class="hide" data-loader>
                     {% include 'icon-spinner' %}
@@ -239,6 +239,25 @@
             </div>
           {% endform %}
         </div>
+
+        {% comment %} b {% endcomment %}
+        <style>
+        .btn--secondary-accent{
+          background-color:#00ff00;
+        }
+        .btn:not([disabled]):hover{
+          background-color:#0000ff;
+        }
+        .btn[disabled], .shopify-payment-button .shopify-payment-button__button--unbranded[disabled], .btn[aria-disabled], .shopify-payment-button .shopify-payment-button__button--unbranded[aria-disabled]{
+          background-color:#767676;
+          color:#fff;
+          pointer-events: none; 
+        }
+        
+        #click:hover{
+          background-color:#0000ff;
+        }
+        </style>
 
         {%- comment -%}
           Live region for announcing updated price and availability to screen readers
