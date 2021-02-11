@@ -215,6 +215,7 @@
                 {%- if section.settings.enable_payment_button %} product-form__item--payment-button {%- endif -%}
                 {%- if product.has_only_default_variant %} product-form__item--no-variants {%- endif -%}"
               >
+              {% if section.settings.add_cart_button %}
                 <button type="submit" name="add"
                   {% unless current_variant.available %} aria-disabled="true"{% endunless %}
                   aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
@@ -232,6 +233,7 @@
                     {% include 'icon-spinner' %}
                   </span>
                 </button>
+              {% endif %}
                 {% if section.settings.enable_payment_button %}
                   {{ form | payment_button }}
                 {% endif %}
@@ -370,6 +372,15 @@
         "zh-TW": "顯示廠商"
       },
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "add_cart_button",
+      "label": {
+        "en": "Show add to cart button",
+        "ja": "カートに追加ボタンを表示する"
+      },
+      "default": true
     },
     {
       "type": "checkbox",
