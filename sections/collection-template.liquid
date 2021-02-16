@@ -24,6 +24,22 @@
       {%- assign is_filter_by_available = true -%}
     {%- endif -%}
 
+    <div class="tab">
+      <a href="https://keigo9.myshopify.com/admin/themes/119229317282/editor?previewPath=%2Fcollections%2Fmens">MEN | </a>
+      <a href="https://keigo9.myshopify.com/admin/themes/119229317282/editor?previewPath=%2Fcollections%2Fwoman">WEMEN</a>
+    </div>
+
+    <style>
+      .tab{
+        display:flex;
+        justify-content:center;
+      }
+      .tab a{
+        position:relative;
+        top:80px;
+      }
+    </style>
+
     {% if section.settings.show_collection_image and collection.image %}
       <div class="collection-hero">
         <div class="collection-hero__image ratio-container lazyload js"
