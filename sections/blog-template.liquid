@@ -201,7 +201,35 @@
 
 {% endpaginate %}
 
+<div class="news-list">
+  <h3>ニュースリリース<h3>
+  {% for article in blog.articles %}
+    <div class="news-list-contents">
+      {% if section.settings.blog_show_date %}
+        <span class="article__date date-txt">
+          {{ article.published_at | time_tag: format: 'date' }}
+        </span>
+      {% endif %}
+      <p class="article-ttl">{{ article.title | escape }}</p>
+    </div>
+  {% endfor %}
+</div>
 
+<style>
+  .news-list{
+    text-align:center;
+  }
+  .news-list-contents{
+    margin:0px 5px;
+  }
+  .date-txt{
+    font-size:13px;
+    margin:0px;
+  }
+  .article-ttl{
+    font-weight:bold;
+  }
+</style>
 
 {% schema %}
 {
