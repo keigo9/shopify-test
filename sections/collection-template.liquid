@@ -24,6 +24,26 @@
       {%- assign is_filter_by_available = true -%}
     {%- endif -%}
 
+
+    <a href="https://keigo9.myshopify.com/collections/all" class="btn-top">TOP</a>
+    <div class="tab">
+      <a href="https://keigo9.myshopify.com/collections/mens" class="tab active">MEN | </a>
+      <a href="https://keigo9.myshopify.com/collections/woman" calss="tab">WEMEN</a>
+    </div>
+
+    <style>
+      .tab{
+        display:flex;
+        justify-content:center;
+      }
+      .tab a,.btn-top{
+        position:relative;
+        top:80px;
+        display:block;
+        text-align:center;
+      }
+    </style>
+
     {% if section.settings.show_collection_image and collection.image %}
       <div class="collection-hero">
         <div class="collection-hero__image ratio-container lazyload js"
