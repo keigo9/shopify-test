@@ -24,9 +24,11 @@
       {%- assign is_filter_by_available = true -%}
     {%- endif -%}
 
+
+    <a href="https://keigo9.myshopify.com/collections/all" class="btn-top">TOP</a>
     <div class="tab">
-      <a href="https://keigo9.myshopify.com/admin/themes/119229317282/editor?previewPath=%2Fcollections%2Fmens">MEN | </a>
-      <a href="https://keigo9.myshopify.com/admin/themes/119229317282/editor?previewPath=%2Fcollections%2Fwoman">WEMEN</a>
+      <a href="https://keigo9.myshopify.com/collections/mens" class="tab active">MEN | </a>
+      <a href="https://keigo9.myshopify.com/collections/mens" calss="tab">WEMEN</a>
     </div>
 
     <style>
@@ -34,9 +36,11 @@
         display:flex;
         justify-content:center;
       }
-      .tab a{
+      .tab a,.btn-top{
         position:relative;
         top:80px;
+        display:block;
+        text-align:center;
       }
     </style>
 
